@@ -2,7 +2,7 @@ file_format: "1"
 id: YG40Teeth
 name: YG40Teeth
 type: shield
-#url: https://github.com/MythosMann/tg4x
+url: https://github.com/hello2kun/YG40Thumb
 requires: [pro_micro]
 features:
   - keys
