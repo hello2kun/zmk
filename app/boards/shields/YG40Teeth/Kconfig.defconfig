@@ -6,10 +6,4 @@ if SHIELD_YG40TEETH
 config ZMK_KEYBOARD_NAME
     default "YG40Teeth"
 
-config ZMK_HID_REPORT_TYPE_NKRO
-    true
-
-config ZMK_HID_KEYBOARD_NKRO_EXTENDED_REPORT
-    true
-
 endif
