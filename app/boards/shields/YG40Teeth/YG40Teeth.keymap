@@ -24,13 +24,26 @@ pin matrix changed
         };
     };
 
-    combos {
+    combos
+    {
         compatible = "zmk,combos";
         mcr_1 {
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp M>;
         };
+    };
+
+    spacebar_layer_tap
+    { 
+        compatible = "zmk,behavior-hold-tap";
+        label = "SPACE_LAYER_TAP";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <125>;
+        global-quick-tap;
+        bindings = <&kp LSHFT>, <&kp SPACE>;
     };
 
 
@@ -52,9 +65,9 @@ pin matrix changed
             bindings = <
 //C0        C1        C2        C3        C4        C5        C6        C7        C8         C9        C10        C11          C12      
 &kp TAB     &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8     &kp N9    &kp N0     &kp MINUS    &kp EQUAL 
-&kp DEL     &kp N4    &kp N5    &kp N6    &trans    &trans    &trans    &trans    &trans     &trans    &trans     &trans       &trans
-&trans      &kp N7    &kp N8    &kp N9    &trans    &trans    &trans    &trans    &trans     &trans    &trans     &kp PG_UP    &trans
-&kp RET     &kp N0    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &kp HOME   &kp PG_DN    &kp END
+&kp DEL     &kp N4    &kp N5    &kp N6    &KP_PLUS  &KP_MINUS &trans    &trans    &trans     &trans    &trans     &trans       &trans
+&trans      &kp N7    &kp N8    &kp N9    &kp N0    &trans    &trans    &trans    &trans     &trans    &trans     &kp PG_UP    &trans
+&kp RET     &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &kp HOME   &kp PG_DN    &kp END
 &trans      &trans    &kp DEL
             >;
         };
