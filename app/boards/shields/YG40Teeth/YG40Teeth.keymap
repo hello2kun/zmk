@@ -25,6 +25,7 @@ pin matrix changed
             bindings = <&kp>, <&kp>;
         };
 
+/*
         mt: mod_tap
         {
             compatible = "zmk,behavior-hold-tap";
@@ -36,6 +37,8 @@ pin matrix changed
             global-quick-tap;
             bindings = <&mo>, <&kp>;
         };
+*/
+
     };
 
     combos
