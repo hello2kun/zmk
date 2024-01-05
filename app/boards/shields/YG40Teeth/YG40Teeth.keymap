@@ -14,13 +14,27 @@ pin matrix changed
 #define OTHER_LAYER    2
 
 / {
-    behaviors {
-        ht: hold_tap {
+    behaviors 
+    {
+        ht: hold_tap
+        {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+
+        mt: mod_tap
+        {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACE_LAYER_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&mo>, <&kp>;
         };
     };
 
@@ -32,18 +46,6 @@ pin matrix changed
             key-positions = <0 1>;
             bindings = <&kp M>;
         };
-    };
-
-    spacebar_layer_tap
-    { 
-        compatible = "zmk,behavior-hold-tap";
-        label = "SPACE_LAYER_TAP";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        quick-tap-ms = <125>;
-        global-quick-tap;
-        bindings = <&kp LSHFT>, <&kp SPACE>;
     };
 
 
