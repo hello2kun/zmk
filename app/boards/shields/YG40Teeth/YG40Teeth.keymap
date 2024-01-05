@@ -34,7 +34,7 @@ pin matrix changed
 &kp BSPC         &kp A     &kp S    &kp D     &kp F      &kp G     &kp H     &kp J     &kp K      &kp L      &kp SEMI    &kp APOS    &kp RET
 &kp LSHFT        &kp Z     &kp X    &kp C     &kp V      &kp B     &kp N     &kp M     &kp COMMA  &kp DOT    &kp FSLH    &kp UP      &kp RSHFT
 &kp LCTRL        &kp LGUI  &kp LALT &mo 1     &kp LSHFT  &kp LALT  &kp RALT  &mo 1     &mo 2      &kp RALT   &kp LEFT    &kp DOWN    &kp RIGHT
-&ht_hp SPACE LSHIFT   &kp LSHIFT &kp BSPC
+&ht LSHIFT SPACE &kp LSHIFT &kp BSPC
             >;
         };
 
