@@ -14,28 +14,15 @@ pin matrix changed
 #define OTHER_LAYER    2
 
 / {
-    behaviors 
-    {
-        ht: hold_tap
-        {
+      behaviors {
+        ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-    };  //Behavior end
-
-    combos
-    {
-        compatible = "zmk,combos";
-        mcr_1 {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp M>;
-        };
     };
-
 
     keymap {
         compatible = "zmk,keymap";
@@ -49,18 +36,18 @@ pin matrix changed
 &kp LCTRL        &kp LGUI  &kp LALT &mo 1     &kp LSHFT  &kp LALT  &kp RALT  &mo 1     &mo 2      &kp RALT   &kp LEFT    &kp DOWN    &kp RIGHT
 &kp SPACE        &kp LSHFT &kp BSPC
             >;
-        }; //end Layer 0
+        };
 
         function_layer {
             bindings = <
 //C0        C1        C2        C3        C4        C5        C6        C7        C8         C9        C10        C11          C12      
 &kp TAB     &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8     &kp N9    &kp N0     &kp MINUS    &kp EQUAL 
-&kp DEL     &kp N4    &kp N5    &kp N6    &KP_PLUS  &KP_MINUS &trans    &trans    &trans     &trans    &trans     &trans       &trans
-&trans      &kp N7    &kp N8    &kp N9    &kp N0    &trans    &trans    &trans    &trans     &trans    &trans     &kp PG_UP    &trans
-&kp RET     &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &kp HOME   &kp PG_DN    &kp END
+&kp DEL     &kp N4    &kp N5    &kp N6    &trans    &trans    &trans    &trans    &trans     &trans    &trans     &trans       &trans
+&trans      &kp N7    &kp N8    &kp N9    &trans    &trans    &trans    &trans    &trans     &trans    &trans     &kp PG_UP    &trans
+&kp RET     &kp N0    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &kp HOME   &kp PG_DN    &kp END
 &trans      &trans    &kp DEL
             >;
-        }; //end Layer 1
+        };
 
         other_layer {
             bindings = <
@@ -71,7 +58,7 @@ pin matrix changed
 &trans    &trans     &trans     &trans    &trans   &trans   &trans       &trans       &trans       &trans       &bt BT_PRV   &kp C_VOL_DN  &bt BT_NXT
 &trans    &trans     &kp PSCRN
             >;
-        }; //end Layer2
+        };
 
-    }; //end keymap
-};
+    };
+}; 
