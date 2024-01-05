@@ -1,55 +1,180 @@
+Skip to content
+hello2kun
+/
+zmk-config
+
+Type / to search
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+Files
+Go to file
+t
+.github
+boards
+config
+YG4Teeth.conf
+YG4Teeth.keymap
+west.yml
+zephyr
+build.yaml
+Editing YG4Teeth.keymap in zmk-config
+Breadcrumbszmk-config/config
+/
+YG4Teeth.keymap
+in
+master
+
+Edit
+
+Preview
+Indent mode
+
+Spaces
+Indent size
+
+2
+Line wrap mode
+
+No wrap
+Editing YG4Teeth.keymap file contents
+Selection deleted
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
+pin matrix changed
  */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/rgb.h>
 
-#define DEFAULT 0
-#define LOWER   1
+#define DEFAULT_LAYER  0
+#define FUNCTION_LAYER 1
+#define OTHER_LAYER    2
 
 / {
+      behaviors {
+        ht: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-            // | Esc   | Vol Up | Esc   | F1   | F2  | F3  | F4  | F5  | F6    | F5     | F6  | F7  | F8  | F9  | F10  | F11   | F12   | Del    |
-            // | Home  | Vol Dn | `     | 1    | 2   | 3   | 4   | 5   | 6     | 5      | 6   | 7   | 8   | 9   | 0    | -     | =     | Bk Spc |
-            // | End   | Tab    | Tab   | Q    | W   | E   | R   | T   | Y     | T      | Y   | U   | I   | O   | P    | [     | ]     | \      |
-            // | Pg Up | Caps   | Ctrl  | A    | S   | D   | F   | G   | H     | G      | H   | J   | K   | L   | ;    | '     | Enter | Enter  |
-            // | Pg Dn | Up     | Shift | Z    | X   | C   | V   | B   | N     | B      | N   | M   | ,   | .   | /    | Shift | Up    |        |
-            // | Left  | Dn     | Right | Ctrl | Alt | Win | Spc | Spc | Enter | Bk Spc | Spc | Spc | Win | Alt | Ctrl | Left  | Dn    | Right  |
             bindings = <
-            &kp ESC   &kp C_VOL_UP &kp ESC   &kp F1    &kp F2   &kp F3    &kp F4    &kp F5    &kp F6    &kp F5     &kp F6    &kp F7    &kp F8    &kp F9   &kp F10   &kp F11   &kp F12   &kp DEL
-            &kp HOME  &kp C_VOL_DN &kp GRAVE &kp N1    &kp N2   &kp N3    &kp N4    &kp N5    &kp N6    &kp N5     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0    &kp MINUS &kp EQUAL &kp BSPC
-            &kp END   &kp TAB      &kp TAB   &kp Q     &kp W    &kp E     &kp R     &kp T     &kp Y     &kp T      &kp Y     &kp U     &kp I     &kp O    &kp P     &kp LBKT  &kp RBKT  &kp BSLH
-            &kp PG_UP &kp CAPS     &kp LCTRL &kp A     &kp S    &kp D     &kp F     &kp G     &kp H     &kp G      &kp H     &kp J     &kp K     &kp L    &kp SEMI  &kp APOS  &kp ENTER &kp ENTER
-            &kp PG_DN &kp UP       &kp LSHFT &kp Z     &kp X    &kp C     &kp V     &kp B     &kp N     &kp B      &kp N     &kp M     &kp COMMA &kp DOT  &kp SLASH &kp RSHFT &kp UP    &mo LOWER
-            &kp LEFT  &kp DOWN     &kp RIGHT &kp LCTRL &kp LALT &kp LMETA &kp SPACE &kp SPACE &kp ENTER &kp BSPC   &kp SPACE &kp SPACE &kp RMETA &kp RALT &kp RCTRL &kp LEFT  &kp DOWN  &kp RIGHT
+//C0             C1        C2       C3        C4         C5        C6        C7        C8         C9         C10         C11         C12        
+&kp ESC          &kp Q     &kp W    &kp E     &kp R      &kp T     &kp Y     &kp U     &kp I      &kp O      &kp P       &kp LBKT    &kp RBKT 
+&kp BSPC         &kp A     &kp S    &kp D     &kp F      &kp G     &kp H     &kp J     &kp K      &kp L      &kp SEMI    &kp APOS    &kp RET
+&kp LSHFT        &kp Z     &kp X    &kp C     &kp V      &kp B     &kp N     &kp M     &kp COMMA  &kp DOT    &kp FSLH    &kp UP      &kp RSHFT
+&kp LCTRL        &kp LGUI  &kp LALT &mo 1     &kp LSHFT  &kp LALT  &kp RALT  &mo 1     &mo 2      &kp RALT   &kp LEFT    &kp DOWN    &kp RIGHT
+&kp SPACE        &kp LSHFT &kp BSPC
             >;
         };
 
-        lower_layer {
-            // | | | | | | | | | | | | | | | | | | |
-            // | | | | | | | | | | | | | | | | | | |
-            // | | | | | | | | | | | | | | | | | | |
-            // | | | | | | | | | | | | | | | | | | |
-            // | | | | | | | | | | | | | | | | | | |
-            // | | | | | | | | | | | | | | | | | | |
+        function_layer {
             bindings = <
-            &bt BT_CLR       &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_SEL 5 &bt BT_SEL 6 &bt BT_SEL 7 &bt BT_CLR       &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_SEL 5 &bt BT_SEL 6 &bt BT_SEL 7
-            &out OUT_USB     &out OUT_BLE      &trans          &trans          &trans          &trans          &trans       &trans       &trans       &out OUT_USB     &out OUT_BLE      &trans          &trans          &trans          &trans          &trans       &trans       &trans
-            &ext_power EP_ON &ext_power EP_OFF &trans          &trans          &trans          &trans          &trans       &trans       &trans       &ext_power EP_ON &ext_power EP_OFF &trans          &trans          &trans          &trans          &trans       &trans       &trans
-            &sys_reset           &bootloader       &trans          &trans          &trans          &trans          &trans       &trans       &trans       &sys_reset           &bootloader       &trans          &trans          &trans          &trans          &trans       &trans       &trans
-            &rgb_ug RGB_TOG  &rgb_ug RGB_HUI   &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &rgb_ug RGB_EFF &trans       &trans       &trans       &rgb_ug RGB_TOG  &rgb_ug RGB_HUI   &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &rgb_ug RGB_EFF &trans       &trans       &trans
-            &trans           &rgb_ug RGB_HUD   &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_EFR &trans       &trans       &trans       &trans           &rgb_ug RGB_HUD   &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_EFR &trans       &trans       &trans
+//C0        C1        C2        C3        C4        C5        C6        C7        C8         C9        C10        C11          C12      
+&kp TAB     &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8     &kp N9    &kp N0     &kp MINUS    &kp EQUAL 
+&kp DEL     &kp N4    &kp N5    &kp N6    &trans    &trans    &trans    &trans    &trans     &trans    &trans     &trans       &trans
+&trans      &kp N7    &kp N8    &kp N9    &trans    &trans    &trans    &trans    &trans     &trans    &trans     &kp PG_UP    &trans
+&kp RET     &kp N0    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &kp HOME   &kp PG_DN    &kp END
+&trans      &trans    &kp DEL
             >;
         };
+
+        other_layer {
+            bindings = <
+//C0      C1         C2         C3        C4       C5       C6         C7           C8           C9           C10           C11            C12     
+&kp GRAVE &kp F1     &kp F2     &kp F3    &kp F4   &kp F5   &kp F6     &kp F7       &kp F8       &kp F9       &kp F10       &kp F11        &kp F12   
+&kp CAPS  &trans     &trans     &trans    &trans   &trans   &trans     &trans       &trans       &trans       &bt BT_DISC   &sys_reset     &bootloader
+&trans    &trans     &trans     &trans    &trans   &trans   &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &trans         &bt BT_CLR
+&trans    &trans     &trans     &trans    &trans   &trans   &trans     &trans       &trans       &trans       &bt BT_PRV    &trans         &bt BT_NXT
+&trans    &trans     &kp PSCRN
+            >;
+        };
+
     };
-};
+}; 
+
+Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
+Editing zmk-config/config/YG4Teeth.keymap at master · hello2kun/zmk-config 
