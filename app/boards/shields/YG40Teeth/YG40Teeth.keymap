@@ -34,7 +34,7 @@ pin matrix changed
 &kp BSPC         &kp A     &kp S    &kp D     &kp F      &kp G     &kp H     &kp J     &kp K      &kp L      &kp SEMI    &kp APOS    &kp RET
 &kp LSHFT        &kp Z     &kp X    &kp C     &kp V      &kp B     &kp N     &kp M     &kp COMMA  &kp DOT    &kp FSLH    &kp UP      &kp RSHFT
 &kp LCTRL        &kp LGUI  &kp LALT &mo 1     &kp LSHFT  &kp LALT  &kp RALT  &mo 1     &mo 2      &kp RALT   &kp LEFT    &kp DOWN    &kp RIGHT
-&kp SPACE        &kp LSHFT &kp BSPC
+&ht_hp SPACE LSHIFT   &kp LSHIFT &kp BSPC
             >;
         };
 
@@ -54,9 +54,9 @@ pin matrix changed
 //C0      C1         C2         C3        C4       C5       C6         C7           C8           C9           C10           C11            C12     
 &kp GRAVE &kp F1     &kp F2     &kp F3    &kp F4   &kp F5   &kp F6     &kp F7       &kp F8       &kp F9       &kp F10       &kp F11        &kp F12
 &kp CAPS  &trans     &trans     &trans    &trans   &trans   &trans     &bt BT_PRV   &bt BT_NXT   &bt BT_CLR   &bt BT_DISC   &sys_reset     &bootloader
-&trans    &trans     &trans     &trans    &trans   &trans   &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &trans         &kp C_VOL_UP
+&trans    &kp A      &trans     &trans    &trans   &trans   &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &trans         &kp C_VOL_UP    &trans
 &trans    &trans     &trans     &trans    &trans   &trans   &trans     &trans       &trans       &trans       &trans        &trans         &kp C_VOL_DN
-&trans    &trans     &kp PSCRN
+&trans    &kp PSCRN
             >;
         };
 
