@@ -24,8 +24,6 @@ pin matrix changed
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-
-
     };  //Behavior end
 
     combos
@@ -51,7 +49,7 @@ pin matrix changed
 &kp LCTRL        &kp LGUI  &kp LALT &mo 1     &kp LSHFT  &kp LALT  &kp RALT  &mo 1     &mo 2      &kp RALT   &kp LEFT    &kp DOWN    &kp RIGHT
 &kp SPACE        &kp LSHFT &kp BSPC
             >;
-        };
+        }; //end Layer 0
 
         function_layer {
             bindings = <
@@ -62,7 +60,7 @@ pin matrix changed
 &kp RET     &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &kp HOME   &kp PG_DN    &kp END
 &trans      &trans    &kp DEL
             >;
-        };
+        }; //end Layer 1
 
         other_layer {
             bindings = <
@@ -73,7 +71,7 @@ pin matrix changed
 &trans    &trans     &trans     &trans    &trans   &trans   &trans       &trans       &trans       &trans       &bt BT_PRV   &kp C_VOL_DN  &bt BT_NXT
 &trans    &trans     &kp PSCRN
             >;
-        };
+        }; //end Layer2
 
-    };
+    }; //end keymap
 };
