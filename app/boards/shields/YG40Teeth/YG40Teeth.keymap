@@ -52,6 +52,19 @@ ombos {
             };
         };
 
+macros {
+        mcr1: mcr1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp N1 &kp Q &kp N2 &kp W &kp N3 &kp E &kp N4 &kp R>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp N1 &kp N2>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
