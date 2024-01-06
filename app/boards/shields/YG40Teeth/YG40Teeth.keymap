@@ -15,15 +15,15 @@ pin matrix changed
 
 / {
       behaviors {
-        ht: hold_tap {
+        ht: hold_tap 
+       {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-        };
+      };
     };
-
 
     keymap {
         compatible = "zmk,keymap";
