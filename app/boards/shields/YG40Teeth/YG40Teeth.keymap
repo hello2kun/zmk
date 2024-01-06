@@ -47,7 +47,7 @@ ombos {
 
          combo_tilde {
             timeout-ms = <50>;
-            key-positions = <0 49>;
+            key-positions = <0 13>;
             bindings = <&kp TILDE>;
             };
         };
