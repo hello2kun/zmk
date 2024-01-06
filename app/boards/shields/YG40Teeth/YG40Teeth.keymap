@@ -18,8 +18,8 @@ pin matrix changed
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
             tapping-term-ms = <200>;
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
     };
