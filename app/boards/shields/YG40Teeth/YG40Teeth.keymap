@@ -10,8 +10,8 @@ pin matrix changed
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT_LAYER  0
-#define FUNCTION_LAYER 1
-#define OTHER_LAYER    2
+#define LAYER2 1
+#define LAYER3 2
 
 / {
       behaviors {
@@ -107,12 +107,12 @@ macros
 
         default_layer {
             bindings = <
-//C0             C1            C2         C3        C4                C5                    C6         C7                    C8         C9         C10         C11         C12        
-&kp ESC          &kp Q         &kp W      &kp E     &kp R             &kp T                 &kp Y      &kp U                 &kp I      &kp O      &kp P       &kp LBKT    &kp RBKT 
-&kp BSPC         &kp A         &kp S      &kp D     &kp F             &kp G                 &kp H      &kp J                 &kp K      &kp L      &kp SEMI    &kp APOS    &kp RET
-&kp LSHFT        &kp Z         &kp X      &kp C     &kp V             &kp B                 &kp N      &kp M                 &kp COMMA  &kp DOT    &kp FSLH    &kp UP      &kp RSHFT
-&kp LCTRL        &kp LGUI      &kp LALT   &mo 1     &bhm LCTRL MINUS  &bhm LALT PLUS &mo 1  &kp DEL    &lt OTHER_LAYER RALT  &kp RALT   &kp LEFT   &kp DOWN    &kp RIGHT
-&lt FUNCTION_LAYER SPACE &ht LSHIFT SPACE &kp BSPC
+//C0             C1            C2         C3        C4               C5                    C6        C7         C8               C9               C10        C11         C12        
+&kp ESC          &kp Q         &kp W      &kp E     &kp R            &kp T                 &kp Y     &kp U      &kp I            &kp O            &kp P      &kp LBKT    &kp RBKT 
+&kp BSPC         &kp A         &kp S      &kp D     &kp F            &kp G                 &kp H     &kp J      &kp K            &kp L            &kp SEMI   &kp APOS    &kp RET
+&kp LSHFT        &kp Z         &kp X      &kp C     &kp V            &kp B                 &kp N     &kp M      &kp COMMA        &kp DOT          &kp FSLH   &kp UP      &kp RSHFT
+&kp LCTRL        &kp LGUI      &kp LALT   &lt      &bhm LCTRL MINUS  &bhm LALT PLUS        &mo 1     &kp DEL    &lt LAYER2 RALT  &lt LAYER2 RALT  &kp LEFT   &kp DOWN    &kp RIGHT
+&lt LAYER2 SPACE &ht LSHIFT SPACE &kp BSPC
             >;
         };
 
@@ -138,5 +138,5 @@ macros
             >;
         };
 
-    }; ////
+    }; 
 }; 
