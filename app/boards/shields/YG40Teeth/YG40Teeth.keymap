@@ -98,7 +98,7 @@ macros
                 <&macro_tap &kp T &kp A &kp SEMI>,
                 <&macro_release &kp LSHFT>,
 
-                <&macro_tap &kp RALT &kp Q &kp K &kp R &kp D &kp L &kp R &kp M &kp S &kp RBKT &kp SPACE &kp RALT>;
+                <&macro_tap &kp RALT &kp Q &kp K &kp R &kp D &kp L &kp R &kp M &kp S &kp RBKT &kp SPACE>;
       };
 
 };
