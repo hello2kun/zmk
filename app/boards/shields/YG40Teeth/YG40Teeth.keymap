@@ -107,11 +107,11 @@ macros
 
         default_layer {
             bindings = <
-//C0             C1            C2         C3              C4               C5              C6      C7         C8               C9               C10        C11         C12        
-&kp ESC          &kp Q         &kp W      &kp E           &kp R            &kp T           &kp Y   &kp U      &kp I            &kp O            &kp P      &kp LBKT    &kp RBKT 
-&kp BSPC         &kp A         &kp S      &kp D           &kp F            &kp G           &kp H   &kp J      &kp K            &kp L            &kp SEMI   &kp APOS    &kp RET
-&kp LSHFT        &kp Z         &kp X      &kp C           &kp V            &kp B           &kp N   &kp M      &kp COMMA        &kp DOT          &kp FSLH   &kp UP      &kp RSHFT
-&kp LCTRL        &kp LGUI      &kp LALT   &lt LAYER2 RET  &bhm LCTRL MINUS &bhm LALT PLUS  &mo 1   &kp DEL    &lt LAYER2 RALT  &lt LAYER2 RALT  &kp LEFT   &kp DOWN    &kp RIGHT
+//C0             C1            C2         C3              C4               C5              C6                C7         C8               C9               C10        C11         C12        
+&kp ESC          &kp Q         &kp W      &kp E           &kp R            &kp T           &kp Y             &kp U      &kp I            &kp O            &kp P      &kp LBKT    &kp RBKT 
+&kp BSPC         &kp A         &kp S      &kp D           &kp F            &kp G           &kp H             &kp J      &kp K            &kp L            &kp SEMI   &kp APOS    &kp RET
+&kp LSHFT        &kp Z         &kp X      &kp C           &kp V            &kp B           &kp N             &kp M      &kp COMMA        &kp DOT          &kp FSLH   &kp UP      &kp RSHFT
+&kp LCTRL        &kp LGUI      &kp LALT   &lt LAYER2 RET  &bhm LCTRL MINUS &bhm LALT PLUS  &lt LAYER1 STAR   &kp DEL    &lt LAYER2 RALT  &lt LAYER2 RALT  &kp LEFT   &kp DOWN    &kp RIGHT
 &lt LAYER1 SPACE &ht LSHIFT SPACE &kp BSPC
             >;
         };
@@ -131,7 +131,7 @@ macros
             bindings = <
 //C0      C1         C2         C3        C4           C5           C6           C7           C8       C9            C10            C11            C12     
 &kp GRAVE &kp F1     &kp F2     &kp F3    &kp F4       &kp F5       &kp F6       &kp F7       &kp F8   &kp F9        &kp F10        &kp F11        &kp F12
-&kp CAPS  &mcr1      &mcr2      &mcr3     &trans       &trans       &trans       &trans       &trans   &trans        &trans         &bt BT_DISC    &trans
+&kp CAPS  &mcr1      &mcr2      &mcr3     &mcr4        &trans       &trans       &trans       &trans   &trans        &trans         &bt BT_DISC    &trans
 &trans    &trans     &trans     &trans    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans   &bt BT_PRV    &bt BT_NXT     &bt BT_CLR     &kp C_VOL_UP    &trans
 &trans    &trans     &trans     &trans    &trans       &trans       &trans       &trans       &trans   &trans        &trans         &kp C_VOL_DN   &trans
 &trans    &trans
