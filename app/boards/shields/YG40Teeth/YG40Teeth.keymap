@@ -59,6 +59,24 @@ macros
       {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            bindings = <&macro_tap &kp H &kp E &kp L &kp L &kp O &kp N2 &kp K &kp U &kp N>;
+      };
+
+      mcr2: mcr2 
+      {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp B &kp A &kp B &kp O &kp N0 &kp N9 &kp N7 &kp N9>
+                     , <&macro_press &kp LSHFT>
+                     , <&macro_tap &kp N1 &kp N2>
+                     , <&macro_release &kp LSHFT>
+            ;
+      };
+
+      mcr3: mcr3
+      {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp N1 &kp Q &kp N2 &kp W &kp N3 &kp E &kp N4 &kp R>
                 , <&macro_press &kp LSHFT>
@@ -67,12 +85,20 @@ macros
                 ;
       };
 
-      mcr2: mcr2 
+      mcr4: mcr4
       {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp H &kp E &kp L &kp L &kp O &kp N2 &kp K &kp U &kp N>;
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp N2>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp LBKT &kp T &kp A>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SENI>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp Q &kp K &kp R &kp D &kp L &kp R &kp M &kp S &kp RBKT &kp SPACE>
+                ;
       };
 };
 
