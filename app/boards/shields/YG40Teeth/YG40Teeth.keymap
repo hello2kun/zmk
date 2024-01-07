@@ -10,8 +10,8 @@ pin matrix changed
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT_LAYER  0
-#define LAYER2 1
-#define LAYER3 2
+#define LAYER1 1
+#define LAYER2 2
 
 / {
       behaviors {
@@ -83,7 +83,6 @@ macros
                 , <&macro_release &kp LSHFT>;
       };
 
-/*
       mcr4: mcr4
       {
             compatible = "zmk,behavior-macro";
@@ -101,7 +100,6 @@ macros
 
                 , <&macro_tap &kp Q &kp K &kp R &kp D &kp L &kp R &kp M &kp S &kp RBKT &kp SPACE>;
       };
-*/
 };
 
     keymap {
@@ -114,7 +112,7 @@ macros
 &kp BSPC         &kp A         &kp S      &kp D           &kp F            &kp G           &kp H   &kp J      &kp K            &kp L            &kp SEMI   &kp APOS    &kp RET
 &kp LSHFT        &kp Z         &kp X      &kp C           &kp V            &kp B           &kp N   &kp M      &kp COMMA        &kp DOT          &kp FSLH   &kp UP      &kp RSHFT
 &kp LCTRL        &kp LGUI      &kp LALT   &lt LAYER2 RET  &bhm LCTRL MINUS &bhm LALT PLUS  &mo 1   &kp DEL    &lt LAYER2 RALT  &lt LAYER2 RALT  &kp LEFT   &kp DOWN    &kp RIGHT
-&lt LAYER2 SPACE &ht LSHIFT SPACE &kp BSPC
+&lt LAYER1 SPACE &ht LSHIFT SPACE &kp BSPC
             >;
         };
 
