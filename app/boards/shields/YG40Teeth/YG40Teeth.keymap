@@ -38,7 +38,7 @@ pin matrix changed
         };
     };
 
-ombos
+combos
 {
         compatible = "zmk,combos";
         combo_tab {
