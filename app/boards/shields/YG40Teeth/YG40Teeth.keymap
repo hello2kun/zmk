@@ -42,23 +42,120 @@ behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <210>;
             bindings = <&kp Q>, <&kp N1>, <&kp EXCL>;
             };
        };
 
+behaviors {
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <210>;
+            bindings = <&kp W>, <&kp N2>, <&kp AT>;
+            };
+       };
+
+behaviors {
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <210>;
+            bindings = <&kp E>, <&kp N3>, <&kp HASH>;
+            };
+       };
+
+behaviors {
+        td3: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <210>;
+            bindings = <&kp R>, <&kp N4>, <&kp DLLR>;
+            };
+       };
+
+behaviors {
+        td4: tap_dance_4 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <210>;
+            bindings = <&kp T>, <&kp N5>, <&kp PRCNT>;
+            };
+       };
+
+behaviors {
+        td5: tap_dance_5 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <210>;
+            bindings = <&kp Y>, <&kp N6>, <&kp CARET>;
+            };
+       };
+
+behaviors {
+        td6: tap_dance_6 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <210>;
+            bindings = <&kp U>, <&kp N7>, <&kp AMPS>;
+            };
+       };
+
+behaviors {
+        td7: tap_dance_7 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <210>;
+            bindings = <&kp I>, <&kp N8>, <&kp STAR>;
+            };
+       };
+
+behaviors {
+        td8: tap_dance_8 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <210>;
+            bindings = <&kp O>, <&kp N9>, <&kp LPAR>;
+            };
+       };
+
+behaviors {
+        td9: tap_dance_9 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <210>;
+            bindings = <&kp P>, <&kp N0>, <&kp RPAR>;
+            };
+       };
+
+behaviors {
+        td10: tap_dance_10 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <210>;
+            bindings = <&kp LBKT>, <&kp MINUS>, <&kp UNDER>;
+            };
+       };
+behaviors {
+        td11: tap_dance_11 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <210>;
+            bindings = <&kp RBKT>, <&kp EQUAL>, <&kp PLUS>;
+            };
+       };
 combos
 {
         compatible = "zmk,combos";
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <0 13>;
             bindings = <&kp TAB>;
             };
 
          combo_tilde {
             timeout-ms = <50>;
-            key-positions = <0 13>;
+            key-positions = <0 1>;
             bindings = <&kp TILDE>;
             };
 };
@@ -118,8 +215,8 @@ macros
 
         default_layer {
             bindings = <
-//C0             C1            C2         C3              C4               C5              C6                C7         C8               C9               C10        C11         C12        
-&gresc           &td0          &kp W      &kp E           &kp R            &kp T           &kp Y             &kp U      &kp I            &kp O            &kp P      &kp LBKT    &kp RBKT 
+//C0             C1            C2         C3              C4                C5             C6                C7         C8               C9               C10        C11         C12        
+&gresc           &td0          &td1       &td2            &td3             &td4            &td5              &td6       &td7             &td8             &td9       &td10       &td11 
 &kp BSPC         &kp A         &kp S      &kp D           &kp F            &kp G           &kp H             &kp J      &kp K            &kp L            &kp SEMI   &kp APOS    &kp RET
 &kp LSHFT        &kp Z         &kp X      &kp C           &kp V            &kp B           &kp N             &kp M      &kp COMMA        &kp DOT          &kp FSLH   &kp UP      &kp RSHFT
 &kp LCTRL        &kp LGUI      &kp LALT   &lt LAYER2 RET  &bhm LCTRL MINUS &bhm LALT PLUS  &lt LAYER1 STAR   &kp DEL    &lt LAYER2 RALT  &lt LAYER1 RALT  &kp LEFT   &kp DOWN    &kp RIGHT
