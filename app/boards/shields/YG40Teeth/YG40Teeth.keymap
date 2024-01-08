@@ -15,11 +15,14 @@ pin matrix changed
 
 / {
 
-&lt {
-    tapping-term-ms = <180>;
+behaviors {
+    lt: layer_tap {
+        compatible = "zmk,behavior-hold-tap";
+        tapping-term-ms = <150>;
+        };
 };
 
-      behaviors {
+behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
