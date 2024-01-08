@@ -12,6 +12,7 @@ pin matrix changed
 #define DEFAULT_LAYER  0
 #define LAYER1 1
 #define LAYER2 2
+#define LAYER2 3
 
 / {
       behaviors {
