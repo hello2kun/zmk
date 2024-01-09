@@ -183,12 +183,137 @@ combos
             bindings = <&kp N1>;
             };
 
+        combo_2 {
+            timeout-ms = <50>;
+            key-positions = <2 15>;
+            bindings = <&kp N2>;
+            };
+
+        combo_3 {
+            timeout-ms = <50>;
+            key-positions = <3 16>;
+            bindings = <&kp N3>;
+            };
+
+        combo_4 {
+            timeout-ms = <50>;
+            key-positions = <4 17>;
+            bindings = <&kp N4>;
+            };
+
+        combo_5 {
+            timeout-ms = <50>;
+            key-positions = <5 18>;
+            bindings = <&kp N5>;
+            };
+
+        combo_6 {
+            timeout-ms = <50>;
+            key-positions = <6 19>;
+            bindings = <&kp N6>;
+            };
+
+        combo_7 {
+            timeout-ms = <50>;
+            key-positions = <7 20>;
+            bindings = <&kp N7>;
+            };
+
+        combo_8 {
+            timeout-ms = <50>;
+            key-positions = <8 21>;
+            bindings = <&kp N8>;
+            };
+
+        combo_9 {
+            timeout-ms = <50>;
+            key-positions = <9 22>;
+            bindings = <&kp N9>;
+            };
+
+        combo_10 {
+            timeout-ms = <50>;
+            key-positions = <10 23>;
+            bindings = <&kp N0>;
+            };
+
+         combo_11 {
+            timeout-ms = <50>;
+            key-positions = <11 24>;
+            bindings = <&kp MINUS>;
+            };
+
+        combo_12 {
+            timeout-ms = <50>;
+            key-positions = <12 25>;
+            bindings = <&kp EQUAL>;
+            };
+
         combo_exc {
             timeout-ms = <50>;
-            key-positions = <1 26>;
+            key-positions = <14 27>;
             bindings = <&kp EXCL>;
             };
 
+        combo_at {
+            timeout-ms = <50>;
+            key-positions = <15 28>;
+            bindings = <&kp EXCL>;
+            };
+
+        combo_dllr {
+            timeout-ms = <50>;
+            key-positions = <16 29>;
+            bindings = <&kp DLLR>;
+            };
+
+        combo_prcnt {
+            timeout-ms = <50>;
+            key-positions = <17 30>;
+            bindings = <&kp PRCNT>;
+            };
+
+        combo_caret {
+            timeout-ms = <50>;
+            key-positions = <18 31>;
+            bindings = <&kp CARET>;
+            };
+
+        combo_amps {
+            timeout-ms = <50>;
+            key-positions = <19 32>;
+            bindings = <&kp AMPS>;
+            };
+
+        combo_star {
+            timeout-ms = <50>;
+            key-positions = <20 33>;
+            bindings = <&kp STAR>;
+            };
+
+        combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <21 34>;
+            bindings = <&kp LPAR>;
+            };
+
+        combo_rpar {
+            timeout-ms = <50>;
+            key-positions = <22 35>;
+            bindings = <&kp RPAR>;
+            };
+
+        combo_minus {
+            timeout-ms = <50>;
+            key-positions = <23 36>;
+            bindings = <&kp UNDER>;
+            };
+
+        combo_equal {
+            timeout-ms = <50>;
+            key-positions = <24 37>;
+            bindings = <&kp PLUS>;
+            };
 };
 
 macros 
