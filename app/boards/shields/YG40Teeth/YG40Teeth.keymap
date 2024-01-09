@@ -14,13 +14,14 @@ pin matrix changed
 #define LAYER2 2
 
 / {
-
+/*
 behaviors {
     lt: layer_tap {
         compatible = "zmk,behavior-hold-tap";
         tapping-term-ms = <120>;
         };
 };
+*/
 
 behaviors {
         ht: hold_tap {
