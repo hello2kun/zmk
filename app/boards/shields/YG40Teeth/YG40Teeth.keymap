@@ -167,13 +167,13 @@ combos
         compatible = "zmk,combos";
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <0 13>;
+            key-positions = <0 1>;
             bindings = <&kp TAB>;
             };
 
          combo_tilde {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <0 13>;
             bindings = <&kp TILDE>;
             };
 };
