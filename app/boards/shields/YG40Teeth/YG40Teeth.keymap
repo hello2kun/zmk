@@ -27,8 +27,8 @@ behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
+            tapping-term-ms = <190>;
+            quick-tap-ms = <170>;
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -39,8 +39,8 @@ behaviors {
         bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
+            tapping-term-ms = <>;
+            quick-tap-ms = <170>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
@@ -382,7 +382,7 @@ macros
 &kp BSPC         &kp A         &kp S      &kp D           &kp F            &kp G           &kp H             &kp J      &kp K            &kp L            &kp SEMI   &kp APOS    &kp RET
 &kp LSHFT        &kp Z         &kp X      &kp C           &kp V            &kp B           &kp N             &kp M      &kp COMMA        &kp DOT          &kp FSLH   &kp UP      &kp RSHFT
 &kp LCTRL        &kp LGUI      &kp LALT   &lt LAYER2 RET  &bhm LCTRL MINUS &bhm LALT PLUS  &lt LAYER1 STAR   &kp DEL    &lt LAYER2 RALT  &lt LAYER1 RALT  &kp LEFT   &kp DOWN    &kp RIGHT
-&lt LAYER1 SPACE &ht LSHIFT SPACE &kp BSPC
+&lt LAYER1 SPACE &bhm LSHIFT SPACE &kp BSPC
             >;
         };
 
