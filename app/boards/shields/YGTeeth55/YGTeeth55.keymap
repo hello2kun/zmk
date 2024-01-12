@@ -14,9 +14,9 @@ pin matrix changed
 #define LAYER2 2
 
 //빌드안되면 여기 수정
-&led_strip {
-    chain-length = <2>;
-};
+//&led_strip {
+//    chain-length = <2>;
+//};
 
 / {
 
