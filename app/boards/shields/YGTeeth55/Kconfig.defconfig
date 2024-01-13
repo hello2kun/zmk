@@ -1,7 +1,7 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_YG40TEETH
+if SHIELD_YGTEETH55
 
 config ZMK_KEYBOARD_NAME
     default "YGTeeth55"
