@@ -321,9 +321,10 @@ combos
             key-positions = <25 38>;
             bindings = <&kp PLUS>;
             };
+
         combo_reboot {
             timeout-ms = <50>;
-            key-positions = <0 54;
+            key-positions = <0 54>;
             bindings = <&sys_reset>;
             };
 };
