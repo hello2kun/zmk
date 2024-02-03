@@ -353,7 +353,7 @@ macros
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp N1 &kp Q &kp N2 &kp W &kp N3 &kp E &kp N4 &kp R>
+                = <&macro_tap &kp R &kp M &kp S &kp N0 &kp N9 &kp N7 &kp N9>
                 , <&macro_press &kp LSHFT>
                 , <&macro_tap &kp N1 &kp N2>
                 , <&macro_release &kp LSHFT>;
