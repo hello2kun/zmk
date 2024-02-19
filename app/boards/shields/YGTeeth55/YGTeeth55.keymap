@@ -250,7 +250,7 @@ combos
 
         combo_12 {
             timeout-ms = <50>;
-            key-positions = <12 52>;
+            key-positions = <12 53>;
             bindings = <&kp EQUAL>;
             };
 
