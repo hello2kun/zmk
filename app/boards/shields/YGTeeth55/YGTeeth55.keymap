@@ -22,7 +22,7 @@ pin matrix changed
 behaviors {
     lt: layer_tap {
         compatible = "zmk,behavior-hold-tap";
-        quick-tap-ms = <170>;
+        quick-tap-ms = <180>;
         flavor = "balanced";
         };
 };
@@ -32,8 +32,8 @@ behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <190>;
-            quick-tap-ms = <170>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <180>;
             require-prior-idle-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -44,8 +44,8 @@ behaviors {
         bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <190>;
-            quick-tap-ms = <170>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <180>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
@@ -55,7 +55,7 @@ behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             bindings = <&kp Q>, <&kp N1>, <&kp EXCL>;
             };
        };
@@ -64,7 +64,7 @@ behaviors {
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             bindings = <&kp W>, <&kp N2>, <&kp AT>;
             };
        };
@@ -73,7 +73,7 @@ behaviors {
         td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             bindings = <&kp E>, <&kp N3>, <&kp HASH>;
             };
        };
@@ -82,7 +82,7 @@ behaviors {
         td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             bindings = <&kp R>, <&kp N4>, <&kp DLLR>;
             };
        };
@@ -91,7 +91,7 @@ behaviors {
         td4: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             bindings = <&kp T>, <&kp N5>, <&kp PRCNT>;
             };
        };
@@ -100,7 +100,7 @@ behaviors {
         td5: tap_dance_5 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             bindings = <&kp Y>, <&kp N6>, <&kp CARET>;
             };
        };
@@ -109,7 +109,7 @@ behaviors {
         td6: tap_dance_6 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             bindings = <&kp U>, <&kp N7>, <&kp AMPS>;
             };
        };
@@ -118,7 +118,7 @@ behaviors {
         td7: tap_dance_7 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             bindings = <&kp I>, <&kp N8>, <&kp STAR>;
             };
        };
@@ -127,7 +127,7 @@ behaviors {
         td8: tap_dance_8 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             bindings = <&kp O>, <&kp N9>, <&kp LPAR>;
             };
        };
@@ -136,7 +136,7 @@ behaviors {
         td9: tap_dance_9 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             bindings = <&kp P>, <&kp N0>, <&kp RPAR>;
             };
        };
@@ -145,7 +145,7 @@ behaviors {
         td10: tap_dance_10 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             bindings = <&kp LBKT>, <&kp MINUS>, <&kp UNDER>;
             };
        };
@@ -153,7 +153,7 @@ behaviors {
         td11: tap_dance_11 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             bindings = <&kp RBKT>, <&kp EQUAL>, <&kp PLUS>;
             };
        };
@@ -162,7 +162,7 @@ behaviors {
         td12: tap_dance_12 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <230>;
             bindings = <&kp ESC>, <&kp TILDE>, <&kp GRAVE>;
             };
        };
@@ -172,7 +172,7 @@ combos
         compatible = "zmk,combos";
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <0 13>;
+            key-positions = <0 12>;
             bindings = <&kp TAB>;
             };
 
@@ -184,145 +184,145 @@ combos
 
         combo_1 {
             timeout-ms = <50>;
-            key-positions = <1 14>;
+            key-positions = <1 13>;
             bindings = <&kp N1>;
             };
 
         combo_2 {
             timeout-ms = <50>;
-            key-positions = <2 15>;
+            key-positions = <2 14>;
             bindings = <&kp N2>;
             };
 
         combo_3 {
             timeout-ms = <50>;
-            key-positions = <3 16>;
+            key-positions = <3 15>;
             bindings = <&kp N3>;
             };
 
         combo_4 {
             timeout-ms = <50>;
-            key-positions = <4 17>;
+            key-positions = <4 16>;
             bindings = <&kp N4>;
             };
 
         combo_5 {
             timeout-ms = <50>;
-            key-positions = <5 18>;
+            key-positions = <5 17>;
             bindings = <&kp N5>;
             };
 
         combo_6 {
             timeout-ms = <50>;
-            key-positions = <6 19>;
+            key-positions = <6 18>;
             bindings = <&kp N6>;
             };
 
         combo_7 {
             timeout-ms = <50>;
-            key-positions = <7 20>;
+            key-positions = <7 19>;
             bindings = <&kp N7>;
             };
 
         combo_8 {
             timeout-ms = <50>;
-            key-positions = <8 21>;
+            key-positions = <8 20>;
             bindings = <&kp N8>;
             };
 
         combo_9 {
             timeout-ms = <50>;
-            key-positions = <9 22>;
+            key-positions = <9 21>;
             bindings = <&kp N9>;
             };
 
         combo_10 {
             timeout-ms = <50>;
-            key-positions = <10 23>;
+            key-positions = <10 22>;
             bindings = <&kp N0>;
             };
 
          combo_11 {
             timeout-ms = <50>;
-            key-positions = <11 24>;
+            key-positions = <11 23>;
             bindings = <&kp MINUS>;
             };
 
         combo_12 {
             timeout-ms = <50>;
-            key-positions = <12 25>;
+            key-positions = <12 52>;
             bindings = <&kp EQUAL>;
             };
 
         combo_exc {
             timeout-ms = <50>;
-            key-positions = <14 27>;
+            key-positions = <13 37>;
             bindings = <&kp EXCL>;
             };
 
         combo_at {
             timeout-ms = <50>;
-            key-positions = <15 28>;
+            key-positions = <14 38>;
             bindings = <&kp AT>;
             };
 
        combo_hash {
             timeout-ms = <50>;
-            key-positions = <16 29>;
+            key-positions = <15 39>;
             bindings = <&kp HASH>;
             };
 
         combo_dllr {
             timeout-ms = <50>;
-            key-positions = <17 30>;
+            key-positions = <16 40>;
             bindings = <&kp DLLR>;
             };
 
         combo_prcnt {
             timeout-ms = <50>;
-            key-positions = <18 31>;
+            key-positions = <17 41>;
             bindings = <&kp PRCNT>;
             };
 
         combo_caret {
             timeout-ms = <50>;
-            key-positions = <19 32>;
+            key-positions = <18 42>;
             bindings = <&kp CARET>;
             };
 
         combo_amps {
             timeout-ms = <50>;
-            key-positions = <20 33>;
+            key-positions = <19 43>;
             bindings = <&kp AMPS>;
             };
 
         combo_star {
             timeout-ms = <50>;
-            key-positions = <21 34>;
+            key-positions = <20 44>;
             bindings = <&kp STAR>;
             };
 
         combo_lpar {
             timeout-ms = <50>;
-            key-positions = <22 35>;
+            key-positions = <21 45>;
             bindings = <&kp LPAR>;
             };
 
         combo_rpar {
             timeout-ms = <50>;
-            key-positions = <23 36>;
+            key-positions = <22 46>;
             bindings = <&kp RPAR>;
             };
 
         combo_minus {
             timeout-ms = <50>;
-            key-positions = <24 37>;
+            key-positions = <29 47>;
             bindings = <&kp UNDER>;
             };
 
         combo_equal {
             timeout-ms = <50>;
-            key-positions = <25 38>;
+            key-positions = <30 48>;
             bindings = <&kp PLUS>;
             };
 };
