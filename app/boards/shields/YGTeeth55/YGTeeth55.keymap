@@ -256,67 +256,67 @@ combos
 
         combo_exc {
             timeout-ms = <50>;
-            key-positions = <13 37>;
+            key-positions = <13 26>;
             bindings = <&kp EXCL>;
             };
 
         combo_at {
             timeout-ms = <50>;
-            key-positions = <14 38>;
+            key-positions = <14 27>;
             bindings = <&kp AT>;
             };
 
        combo_hash {
             timeout-ms = <50>;
-            key-positions = <15 39>;
+            key-positions = <15 28>;
             bindings = <&kp HASH>;
             };
 
         combo_dllr {
             timeout-ms = <50>;
-            key-positions = <16 40>;
+            key-positions = <16 29>;
             bindings = <&kp DLLR>;
             };
 
         combo_prcnt {
             timeout-ms = <50>;
-            key-positions = <17 41>;
+            key-positions = <17 30>;
             bindings = <&kp PRCNT>;
             };
 
         combo_caret {
             timeout-ms = <50>;
-            key-positions = <18 42>;
+            key-positions = <18 31>;
             bindings = <&kp CARET>;
             };
 
         combo_amps {
             timeout-ms = <50>;
-            key-positions = <19 43>;
+            key-positions = <19 32>;
             bindings = <&kp AMPS>;
             };
 
         combo_star {
             timeout-ms = <50>;
-            key-positions = <20 44>;
+            key-positions = <20 33>;
             bindings = <&kp STAR>;
             };
 
         combo_lpar {
             timeout-ms = <50>;
-            key-positions = <21 45>;
+            key-positions = <21 34>;
             bindings = <&kp LPAR>;
             };
 
         combo_rpar {
             timeout-ms = <50>;
-            key-positions = <22 46>;
+            key-positions = <22 35>;
             bindings = <&kp RPAR>;
             };
 
         combo_minus {
             timeout-ms = <50>;
-            key-positions = <29 47>;
+            key-positions = <29 36>;
             bindings = <&kp UNDER>;
             };
 
@@ -396,7 +396,7 @@ macros
 //C0        C1        C2        C3        C4        C5        C6        C7        C8         C9        C10        C11          
 &td12       &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8     &kp N9    &kp N0     &kp MINUS 
 &kp DEL     &kp N4    &kp N5    &kp N6    &kp DLLR  &kp PRCNT &kp CARET &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &kp UNDER
-&trans      &kp N7    &kp N8    &kp N9    &kp NO    &trans    &trans    &trans    &trans     &trans    &trans     &kp PG_UP    
+&trans      &kp N7    &kp N8    &kp N9    &kp N0    &trans    &trans    &trans    &trans     &trans    &trans     &kp PG_UP    
 &kp RET     &trans    &trans    &trans    &mo 3     &trans    &trans    &kp INS   &trans     &trans    &kp HOME   &kp PG_DN    
 &trans      &trans    &kp DEL   &kp EQUAL &kp PLUS  &trans    &kp END
             >;
