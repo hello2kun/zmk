@@ -394,9 +394,9 @@ macros
         layer1 {
             bindings = <
 //C0        C1        C2        C3        C4        C5        C6        C7        C8         C9        C10        C11          
-&td12       &td0      &td1      &td2      &td3      &td4      &td5      &td6      &td7       &td8      &td9       &kp MINUS 
-&kp DEL     &td3      &td4      &td5      &kp DLLR   &kp PRCNT &kp CARET &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &kp UNDER
-&trans      &td6      &td7      &td8      &td9      &td9      &trans    &trans    &trans     &trans    &trans     &kp PG_UP    
+&td12       &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7    &kp N8     &kp N9    &kp N0     &kp MINUS 
+&kp DEL     &kp N4    &kp N5    &kp N6    &kp DLLR  &kp PRCNT &kp CARET &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &kp UNDER
+&trans      &kp N7    &kp N8    &kp N9    &kp NO    &trans    &trans    &trans    &trans     &trans    &trans     &kp PG_UP    
 &kp RET     &trans    &trans    &trans    &mo 3     &trans    &trans    &kp INS   &trans     &trans    &kp HOME   &kp PG_DN    
 &trans      &trans    &kp DEL   &kp EQUAL &kp PLUS  &trans    &kp END
             >;
