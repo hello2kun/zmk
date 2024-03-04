@@ -403,7 +403,7 @@ macros
             bindings = <
 //C0      C1           C2           C3           C4           C5           C6        C7        C8         C9         C10              C11              
 &kp GRAVE &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6    &kp F7    &kp F8     &kp F9     &kp F10          &kp F11     
-&kp CAPS  &mcr1        &mcr2        &mcr3        &mcr4        &mcr5        &mcr6     &mcr7     &mcr8      &mcr9      &rgb_ug RGB_ON   &rgb_ug RGB_OFF      
+&kp CAPS  &mcr1        &mcr2        &mcr3        &mcr4        &trans        &trans     &trans     &trans      &trans      &rgb_ug RGB_ON   &rgb_ug RGB_OFF      
 &trans    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans    &trans    &bt BT_PRV &bt BT_NXT &bt BT_CLR       &kp C_VOL_UP 
 &trans    &trans       &trans       &trans       &trans       &trans       &trans    &trans    &trans     &kp LANG2  &kp C_PREV       &kp C_VOL_DN 
 &trans    &trans       &trans       &kp F12      &kp PSCRN    &kp C_PP     &kp C_NEXT
