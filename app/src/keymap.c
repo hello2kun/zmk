@@ -294,7 +294,7 @@ int zmk_keymap_set_layer_binding_at_idx(zmk_keymap_layer_id_t layer_id, uint8_t 
 
     uint8_t *pending = zmk_keymap_layer_pending_changes[layer_id];
 
-    WRITE_BIT(pending[binding_idx / 8], binding_idx % 8, 1);
+    WRITE_BIT(pending[storage_binding_idx / 8], storage_binding_idx % 8, 1);
 
     // TODO: Need a mutex to protect access to the keymap data?
     memcpy(&zmk_keymap[layer_id][storage_binding_idx], &binding, sizeof(binding));
@@ -483,10 +483,11 @@ static int save_bindings(void) {
 
         for (int kp = 0; kp < ZMK_KEYMAP_LEN; kp++) {
             if (pending[kp / 8] & BIT(kp % 8)) {
-                LOG_DBG("Pending save for layer %d at key position %d", l, kp);
 
-                const struct zmk_behavior_binding *binding =
-                    zmk_keymap_get_layer_binding_at_idx(l, kp);
+                const struct zmk_behavior_binding *binding = &zmk_keymap[l][kp];
+                LOG_DBG("Pending save for layer %d at key position %d: %s with %d, %d", l, kp,
+                        binding->behavior_dev, binding->param1, binding->param2);
+
                 struct zmk_behavior_binding_setting binding_setting = {
                     .behavior_local_id = zmk_behavior_get_local_id(binding->behavior_dev),
                     .param1 = binding->param1,
@@ -512,10 +513,10 @@ static int save_bindings(void) {
                     LOG_ERR("Failed to save keymap binding at %d on layer %d (%d)", l, kp, ret);
                     return ret;
                 }
+
+                WRITE_BIT(pending[kp / 8], kp % 8, 0);
             }
         }
-
-        *pending = 0;
     }
 
     return 0;
@@ -608,13 +609,45 @@ int zmk_keymap_discard_changes(void) {
     return ret;
 }
 
+static int keymap_track_changed_bindings(const char *key, size_t len, settings_read_cb read_cb,
+                                         void *cb_arg, void *param) {
+    const char *next;
+    if (settings_name_steq(key, "l", &next) && next) {
+        uint8_t(*state)[ZMK_KEYMAP_LAYERS_LEN][PENDING_ARRAY_SIZE] =
+            (uint8_t(*)[ZMK_KEYMAP_LAYERS_LEN][PENDING_ARRAY_SIZE])param;
+        char *endptr;
+        uint8_t layer = strtoul(next, &endptr, 10);
+        if (*endptr != '/') {
+            LOG_WRN("Invalid layer number: %s with endptr %s", next, endptr);
+            return -EINVAL;
+        }
+
+        uint8_t key_position = strtoul(endptr + 1, &endptr, 10);
+
+        if (*endptr != '\0') {
+            LOG_WRN("Invalid key_position number: %s with endptr %s", next, endptr);
+            return -EINVAL;
+        }
+
+        WRITE_BIT((*state)[layer][key_position / 8], key_position % 8, 1);
+    }
+    return 0;
+}
+
 int zmk_keymap_reset_settings(void) {
     settings_delete(LAYER_ORDER_SETTINGS_KEY);
+
+    uint8_t zmk_keymap_layer_changes[ZMK_KEYMAP_LAYERS_LEN][PENDING_ARRAY_SIZE];
+
+    settings_load_subtree_direct("keymap", keymap_track_changed_bindings,
+                                 &zmk_keymap_layer_changes);
 
     for (int l = 0; l < ZMK_KEYMAP_LAYERS_LEN; l++) {
         char layer_name_setting_name[14];
         sprintf(layer_name_setting_name, LAYER_NAME_SETTINGS_KEY, l);
         settings_delete(layer_name_setting_name);
+
+        uint8_t *changes = zmk_keymap_layer_changes[l];
 
         for (int k = 0; k < ZMK_KEYMAP_LEN; k++) {
             if (memcmp(&zmk_keymap[l][k], &zmk_stock_keymap[l][k],
@@ -622,9 +655,12 @@ int zmk_keymap_reset_settings(void) {
                 continue;
             }
 
-            char setting_name[20];
-            sprintf(setting_name, LAYER_BINDING_SETTINGS_KEY, l, k);
-            settings_delete(setting_name);
+            if (changes[k / 8] & BIT(k % 8)) {
+                LOG_WRN("CLEAR %d on %d layer", k, l);
+                char setting_name[20];
+                sprintf(setting_name, LAYER_BINDING_SETTINGS_KEY, l, k);
+                settings_delete(setting_name);
+            }
         }
     }
 
