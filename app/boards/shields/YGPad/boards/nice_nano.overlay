@@ -1,29 +1,40 @@
 #include <dt-bindings/led/led.h>
 
-&pinctrl {
-    spi3_default: spi3_default {
-        group1 {
+#핀 컨트롤
+&pinctrl 
+{
+    spi3_default: spi3_default
+    {
+        group1
+        {
             psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>;
         };
     };
 
-    spi3_sleep: spi3_sleep {
-        group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>;
+
+    #저전력일때 지정된 핀은 전류 소모량 줄임
+    spi3_sleep: spi3_sleep 
+    {
+        group1
+        {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>; 
             low-power-enable;
         };
     };
 };
 
-&spi3 {
+#SPI3 인터페이스의 디바이스 노드와 연결
+&spi3 
+{
     compatible = "nordic,nrf-spim";
     status = "okay";
 
-    pinctrl-0 = <&spi3_default>;
-    pinctrl-1 = <&spi3_sleep>;
+    pinctrl-0 = <&spi3_default>; #기본 핀 맵핑
+    pinctrl-1 = <&spi3_sleep>;   #저전력 상태에서 핀맵핑
     pinctrl-names = "default", "sleep";
 
-    led_strip: ws2812@0 {
+    led_strip: ws2812@0
+    {
         compatible = "worldsemi,ws2812-spi";
 
         /* SPI */
@@ -31,16 +42,29 @@
         spi-max-frequency = <4000000>;
 
         /* WS2812 */
-        chain-length = <2>; /* arbitrary; change at will */
+        chain-length = <1>; /* arbitrary; change at will */
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
 
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
 };
+//
 
-/ {
-    chosen {
+&encoder0
+{
+    compatible = "gpio-rotary-encoder";
+    gpios = <&gpio0 17 GPIO_ACTIVATE_HIGH>, //017번 핀
+            <&gpio0 20 GPIO_ACTIVATE_HIGH>; //020번 핀
+    encoder-steps = <4>; //인코더 단계 수
+};
+
+
+/ 
+{
+chosen 
+    {
         zmk,underglow = &led_strip;
+        
     };
 };
