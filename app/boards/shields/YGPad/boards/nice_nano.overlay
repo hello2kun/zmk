@@ -51,14 +51,26 @@
 };
 //
 
-&encoder0
+encoder: encoder
 {
-    compatible = "gpio-rotary-encoder";
-    gpios = <&gpio0 17 GPIO_ACTIVATE_HIGH>, //017번 핀
-            <&gpio0 20 GPIO_ACTIVATE_HIGH>; //020번 핀
-    encoder-steps = <4>; //인코더 단계 수
+    compatible = "alps,ec11";
+    a-gpios = <&gpio17 (GPIO_ACTIVATE_HIGH | GPIO_PULL_UP)>; //017번 핀
+    b-gpios = <&gpio20 (GPIO_ACTIVATE_HIGH | GPIO_PULL_UP)>; //020번 핀
+    steps = <80>; //인코더 단계 수
+    status = "disabled";
 };
 
+sensors: sensors
+{
+    compatible = "zmk, keymap-sensors";
+    sensors = <&encoder>;
+    triggers-per-rotation = <20>;
+}
+
+&encoder
+{
+    status = "okay";
+}
 
 / 
 {
