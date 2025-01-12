@@ -54,8 +54,8 @@
 &encoder0
 {
     compatible = "gpio-rotary-encoder";
-    gpios = <&gpio0 6 GPIO_ACTIVATE_HIGH>, //006번 핀
-            <&gpio0 8 GPIO_ACTIVATE_HIGH>; //008번 핀
+    gpios = <&gpio0 17 GPIO_ACTIVATE_HIGH>, //017번 핀
+            <&gpio0 20 GPIO_ACTIVATE_HIGH>; //020번 핀
     encoder-steps = <4>; //인코더 단계 수
 };
 
