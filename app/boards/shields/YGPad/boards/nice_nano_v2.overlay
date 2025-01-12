@@ -51,7 +51,7 @@
 };
 //
 
-&encoder0
+encoder: encoder
 {
     compatible = "alps,ec11";
     a-gpios = <&gpio0 17 (GPIO_ACTIVATE_HIGH | GPIO_PULL_UP)>; //017번 핀
@@ -60,6 +60,12 @@
     status = "disabled";
 };
 
+sensors: sensors
+{
+    compatible = "zmk, keymap-sensors";
+    sensors = <&encoder>;
+    triggers-per-rotation = <20>;
+}
 
 / 
 {
