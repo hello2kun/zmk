@@ -1,8 +1,8 @@
 file_format: "1"
-id: YGTeeth56_ChocV2
-name: YGTeeth56_ChocV2
+id: YGPad
+name: YGPad
 type: shield
-url: https://github.com/hello2kun/YGTeeth56_ChocV2
+url: https://github.com/hello2kun/YGPad
 requires: [pro_micro]
 features:
   - keys
