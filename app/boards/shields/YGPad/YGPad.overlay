@@ -52,9 +52,9 @@ map = <
         status = "okay";
     };
 
-    sensors: sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&encoder>;
+    &sensors: sensors {
+        //compatible = "zmk,keymap-sensors";
+        //sensors = <&encoder>;
         triggers-per-rotation = <20>;
     };
 };
