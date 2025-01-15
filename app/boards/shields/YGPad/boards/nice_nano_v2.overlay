@@ -1,6 +1,5 @@
 #include <dt-bindings/led/led.h>
 
-#핀 컨트롤
 &pinctrl 
 {
     spi3_default: spi3_default
@@ -12,7 +11,6 @@
     };
 
 
-    #저전력일때 지정된 핀은 전류 소모량 줄임
     spi3_sleep: spi3_sleep 
     {
         group1
@@ -23,14 +21,13 @@
     };
 };
 
-#SPI3 인터페이스의 디바이스 노드와 연결
 &spi3 
 {
     compatible = "nordic,nrf-spim";
     status = "okay";
 
-    pinctrl-0 = <&spi3_default>; #기본 핀 맵핑
-    pinctrl-1 = <&spi3_sleep>;   #저전력 상태에서 핀맵핑
+    pinctrl-0 = <&spi3_default>;
+    pinctrl-1 = <&spi3_sleep>;  
     pinctrl-names = "default", "sleep";
 
     led_strip: ws2812@0
@@ -54,9 +51,9 @@
 encoder: encoder
 {
     compatible = "alps,ec11";
-    a-gpios = <&gpio17 (GPIO_ACTIVATE_HIGH | GPIO_PULL_UP)>; //017번 핀
-    b-gpios = <&gpio20 (GPIO_ACTIVATE_HIGH | GPIO_PULL_UP)>; //020번 핀
-    steps = <80>; //인코더 단계 수
+    a-gpios = <&gpio17 (GPIO_ACTIVATE_HIGH | GPIO_PULL_UP)>; 
+    b-gpios = <&gpio20 (GPIO_ACTIVATE_HIGH | GPIO_PULL_UP)>; 
+    steps = <80>; 
     status = "disabled";
 };
 
