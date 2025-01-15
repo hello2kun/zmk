@@ -46,8 +46,8 @@
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
 };
-//
 
+/*
 encoder: encoder
 {
     compatible = "alps,ec11";
@@ -68,6 +68,8 @@ sensors: sensors
 {
     status = "okay";
 };
+
+*/
 
 / 
 {
