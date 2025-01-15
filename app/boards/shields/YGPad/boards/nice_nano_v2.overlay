@@ -47,35 +47,8 @@
     };
 };
 
-/*
-encoder: encoder
-{
-    compatible = "alps,ec11";
-    a-gpios = <&gpio17 (GPIO_ACTIVATE_HIGH | GPIO_PULL_UP)>; 
-    b-gpios = <&gpio20 (GPIO_ACTIVATE_HIGH | GPIO_PULL_UP)>; 
-    steps = <80>; 
-    status = "disabled";
-};
-
-sensors: sensors
-{
-    compatible = "zmk, keymap-sensors";
-    sensors = <&encoder>;
-    triggers-per-rotation = <20>;
-};
-
-&encoder
-{
-    status = "okay";
-};
-
-*/
-
-/ 
-{
-chosen 
-    {
+/ {
+    chosen {
         zmk,underglow = &led_strip;
-        
     };
 };
