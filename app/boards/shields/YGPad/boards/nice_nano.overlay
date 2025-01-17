@@ -1,6 +1,5 @@
 #include <dt-bindings/led/led.h>
 
-#핀 컨트롤
 &pinctrl 
 {
     spi3_default: spi3_default
@@ -12,7 +11,6 @@
     };
 
 
-    #저전력일때 지정된 핀은 전류 소모량 줄임
     spi3_sleep: spi3_sleep 
     {
         group1
@@ -23,7 +21,6 @@
     };
 };
 
-#SPI3 인터페이스의 디바이스 노드와 연결
 &spi3 
 {
     compatible = "nordic,nrf-spim";
@@ -50,7 +47,7 @@
     };
 };
 
-
+/*
 encoder: encoder
 {
     compatible = "alps,ec11";
