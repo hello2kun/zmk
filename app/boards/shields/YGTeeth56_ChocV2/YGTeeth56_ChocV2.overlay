@@ -36,6 +36,29 @@
             ;
     };
 
+//Mouse
+behaviors
+{
+    mmv_behavior: mmv {
+        compatible = "zmk,behavior-input-two-axis";
+        label = "Mouse Move";
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        time-to-max-speed-ms = <300>;
+        acceleration-exponent = <1>;
+    };
+
+    msc_behavior: msc {
+        compatible = "zmk,behavior-input-two-axis";
+        label = "Mouse Scroll";
+        x-input-code = <INPUT_REL_HWHEEL>;
+        y-input-code = <INPUT_REL_WHEEL>;
+        time-to-max-speed-ms = <300>;
+        acceleration-exponent = <0>;
+    };
+};
+//Mouse End
+
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         rows = <5>;
