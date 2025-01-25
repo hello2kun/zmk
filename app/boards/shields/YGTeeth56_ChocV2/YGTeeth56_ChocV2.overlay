@@ -56,8 +56,8 @@
         >;
     };
 
-    chosen {
+   // chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+    //    zmk,matrix_transform = &default_transform;
     };
 };
