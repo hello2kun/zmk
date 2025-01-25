@@ -6,3 +6,5 @@ url: https://github.com/hello2kun/YGTeeth56_ChocV2
 requires: [pro_micro]
 features:
   - keys
+  - undergrow
+  - studio
