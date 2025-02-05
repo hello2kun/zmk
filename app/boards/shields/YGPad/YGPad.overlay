@@ -13,6 +13,14 @@ kscan0: kscan
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
         wakeup-source;
+        row-gpios
+            = <&pro_micro 15 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 16 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 10 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 17 GPIO_ACTIVE_HIGH>
+            ;
+
         col-gpios
                 = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
                 , <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -22,14 +30,6 @@ kscan0: kscan
                 , <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
                 , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
                 ;
-
-        row-gpios
-            = <&pro_micro 15 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 14 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 16 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 10 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 17 GPIO_ACTIVE_HIGH>
-            ;
 };
 
 encoder: encoder 
@@ -53,7 +53,7 @@ default_transform: keymap_transform_0
 {
     compatible = "zmk,matrix-transform";
     rows = <5>;
-    columns = <6>;
+    columns = <7>;
 
 map = <
     RC(0,0) RC(0,1) RC(0,2) RC(0,3)
