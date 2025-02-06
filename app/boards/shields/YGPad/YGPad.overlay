@@ -7,6 +7,11 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
+        chosen 
+        {
+                zmk,kscan = &kscan0;
+                zmk,matrix_transform = &default_transform;
+        };
 
 kscan0: kscan 
 {
@@ -14,7 +19,7 @@ kscan0: kscan
         diode-direction = "col2row";
         wakeup-source;
         row-gpios
-            = <&pro_micro 15 GPIO_ACTIVE_HIGH>
+            = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 14 GPIO_ACTIVE_HIGH>
             , <&pro_micro 16 GPIO_ACTIVE_HIGH>
             , <&pro_micro 10 GPIO_ACTIVE_HIGH>
@@ -22,13 +27,13 @@ kscan0: kscan
             ;
 
         col-gpios
-                = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                = <&pro_micro 21 GPIO_ACTIVE_HIGH>
                 , <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-                , <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                , <&pro_micro 19 GPIO_ACTIVE_HIGH>
                 , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-                , <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-                , <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-                , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                , <&pro_micro 3 GPIO_ACTIVE_HIGH>
+                , <&pro_micro 4 GPIO_ACTIVE_HIGH>
+                , <&pro_micro 5 GPIO_ACTIVE_HIGH>
                 ;
 };
 
@@ -64,9 +69,5 @@ map = <
     >;
 };
 
-    chosen 
-    {
-        zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
-    };
+    
 };
