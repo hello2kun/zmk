@@ -23,7 +23,7 @@
                 , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>
                 , <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>
                 , <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>
-                , <&pro_micro 17 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>
+                //, <&pro_micro 17 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>
                 ;
 
                 col-gpios
@@ -57,7 +57,7 @@
         default_transform: keymap_transform_0 
         {
                 compatible = "zmk,matrix-transform";
-                rows = <5>;
+                rows = <4>;
                 columns = <4>;
 
                 map = <
