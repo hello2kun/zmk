@@ -1,0 +1,10 @@
+file_format: "1"
+id: YGTeeth56_V3
+name: YGTeeth56_V3
+type: shield
+url: https://github.com/hello2kun/YGTeeth56_V3
+requires: [pro_micro]
+features:
+  - keys
+  - undergrow
+  - studio
