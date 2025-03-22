@@ -1,0 +1,5 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_YGTEETH56_V3
+    def_bool $(shields_list_contains,YGTeeth56_V3)
