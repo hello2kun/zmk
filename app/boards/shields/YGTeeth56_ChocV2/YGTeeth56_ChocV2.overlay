@@ -5,7 +5,7 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <layouts/YG/YGTeeth56_Ver2.dtsi.dtsi>
+#include <layouts/YG/YGTeeth56_Ver2.dtsi>
 
 //zmk studio 기본 매트릭스 지정
 &ygteeth56Ver2_layout {
