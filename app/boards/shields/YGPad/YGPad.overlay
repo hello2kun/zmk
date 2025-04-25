@@ -5,6 +5,7 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <YGPad-layouts.dtsi>
 
 &ygpad_layout {
     transform = <&default_transform>;
