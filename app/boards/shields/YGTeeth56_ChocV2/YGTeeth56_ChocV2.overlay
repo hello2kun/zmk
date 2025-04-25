@@ -5,12 +5,19 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <layouts/YG/YGTeeth56_Ver2.dtsi.dtsi>
+
+//zmk studio 기본 매트릭스 지정
+&ygteeth56Ver2_layout {
+    transform = <&default_transform>;
+};
 
 / {
     chosen
     {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+        //zmk,matrix_transform = &default_transform;
+        zmk,physical-layout = &ygteeth56Ver2_layout;
     };
 
     kscan0: kscan 
