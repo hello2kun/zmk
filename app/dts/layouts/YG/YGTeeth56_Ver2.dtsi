@@ -2,7 +2,7 @@
 #include <physical_layouts.dtsi>
 
 / {
-    ygteeth56_Ver2_layout: ygteeth56_Ver2_layout {
+    ygteeth56Ver2_layout: ygteeth56Ver2_layout {
         compatible = "zmk,physical-layout";
         display-name = "YGTeeth56_Ver2";
         transform = <&default_transform>;
