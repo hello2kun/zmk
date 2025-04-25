@@ -9,20 +9,20 @@
         kscan = <&kscan0>;
 
         keys  //                     w   h  x    y     rot    rx    ry
-            = <&key_physical_attrs 100 100  0    -200  0     0     0>
-            , <&key_physical_attrs 100 100  100  -200  0     0     0>
-            , <&key_physical_attrs 100 100  200  -200  0     0     0>
-            , <&key_physical_attrs 100 100  300  -200  0     0     0>
-            , <&key_physical_attrs 100 100  0    -100  0     0     0>
-            , <&key_physical_attrs 100 100  100  -100  0     0     0>
-            , <&key_physical_attrs 100 100  200  -100  0     0     0>
+            = <&key_physical_attrs 125 100  0    0     0     0     0>
+            , <&key_physical_attrs 100 100  125  0     0     0     0> //Q
+            , <&key_physical_attrs 100 100  225  0     0     0     0> 
+            , <&key_physical_attrs 100 100  325  0     0     0     0>
+            , <&key_physical_attrs 100 100  425  0     0     0     0>
+            , <&key_physical_attrs 100 100  525  0     0     0     0>
+            , <&key_physical_attrs 100 100  625  0     0     0     0>
             , <&key_physical_attrs 100 100  300  -100  0     0     0>
             , <&key_physical_attrs 100 100  0    0     0     0     0>
             , <&key_physical_attrs 100 100  100  0     0     0     0>
             , <&key_physical_attrs 100 100  200  0     0     0     0>
             , <&key_physical_attrs 100 100  300  0     0     0     0>
-            , <&key_physical_attrs 100 200  0    100   0     0     0>
-            , <&key_physical_attrs 100 100  100  100   0     0     0>
+            , <&key_physical_attrs 100 200  0    100   0     0     0> //R Bracket
+            , <&key_physical_attrs 125 100  100  100   0     0     0> //Back Space
             , <&key_physical_attrs 100 100  200  100   0     0     0>
             , <&key_physical_attrs 100 100  300  100   0     0     0>
             , <&key_physical_attrs 100 100  100  200   0     0     0>
