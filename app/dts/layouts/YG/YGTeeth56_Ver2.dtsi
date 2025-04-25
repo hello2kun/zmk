@@ -1,0 +1,68 @@
+
+#include <physical_layouts.dtsi>
+
+/ {
+    ygteeth56_v2_layout: ygteeth56_v2_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "YGTeeth56_Ver2";
+        transform = <&default_transform>;
+        kscan = <&kscan0>;
+
+        keys  //                     w   h  x     y     rot    rx    ry
+            = <&key_physical_attrs 125 100  0     0     0     0     0>
+            , <&key_physical_attrs 100 100  125   0     0     0     0> //Q
+            , <&key_physical_attrs 100 100  225   0     0     0     0> 
+            , <&key_physical_attrs 100 100  325   0     0     0     0>
+            , <&key_physical_attrs 100 100  425   0     0     0     0>
+            , <&key_physical_attrs 100 100  525   0     0     0     0>
+            , <&key_physical_attrs 100 100  625   0     0     0     0>
+            , <&key_physical_attrs 100 100  725   0     0     0     0>
+            , <&key_physical_attrs 100 100  825   0     0     0     0>
+            , <&key_physical_attrs 100 100  925   0     0     0     0>
+            , <&key_physical_attrs 100 100  1025  0     0     0     0>
+            , <&key_physical_attrs 100 100  1125  0     0     0     0>
+            , <&key_physical_attrs 100 200  1225  0     0     0     0> //R Bracket
+            , <&key_physical_attrs 125 100  1350  0     0     0     0> //Back Space
+            , <&key_physical_attrs 150 100  150   100   0     0     0> //Caps
+            , <&key_physical_attrs 100 100  250   100   0     0     0> //A
+            , <&key_physical_attrs 100 100  350   100   0     0     0>
+            , <&key_physical_attrs 100 100  450   100   0     0     0>
+            , <&key_physical_attrs 100 100  550   100   0     0     0>
+            , <&key_physical_attrs 100 100  650   100   0     0     0>
+            , <&key_physical_attrs 100 100  750   100   0     0     0>
+            , <&key_physical_attrs 100 100  850   100   0     0     0> 
+            , <&key_physical_attrs 100 100  950   100   0     0     0> 
+            , <&key_physical_attrs 200 100  1050  100   0     0     0> //Enter
+            , <&key_physical_attrs 200 100  0     200   0     0     0> //Left Shift
+            , <&key_physical_attrs 100 100  200   200   0     0     0> //Z
+            , <&key_physical_attrs 100 100  300   200   0     0     0> 
+            , <&key_physical_attrs 100 100  400   200   0     0     0> 
+            , <&key_physical_attrs 100 100  500   200   0     0     0> 
+            , <&key_physical_attrs 100 100  600   200   0     0     0> 
+            , <&key_physical_attrs 100 100  700   200   0     0     0> 
+            , <&key_physical_attrs 100 100  800   200   0     0     0> //M
+            , <&key_physical_attrs 100 100  900   200   0     0     0>
+            , <&key_physical_attrs 100 100  1000  200   0     0     0>
+            , <&key_physical_attrs 100 100  1100  200   0     0     0> //?
+            , <&key_physical_attrs 125 100  1200  200   0     0     0>
+            , <&key_physical_attrs 100 100  1325  200   0     0     0>
+            , <&key_physical_attrs 125 100  1425  200   0     0     0>
+            , <&key_physical_attrs 125 100  0     300   0     0     0> //Ctrl
+            , <&key_physical_attrs 100 100  125   300   0     0     0>
+            , <&key_physical_attrs 100 100  225   300   0     0     0> //Alt
+            , <&key_physical_attrs 100 125  325   300   0     0     0> //Ret
+            , <&key_physical_attrs 100 100  425   300   0     0     0> //-
+            , <&key_physical_attrs 100 100  525   300   0     0     0> //+
+            , <&key_physical_attrs 100 100  625   300   0     0     0> //*
+            , <&key_physical_attrs 100 100  725   300   0     0     0> //divide
+            , <&key_physical_attrs 100 125  825   300   0     0     0> //RAlt
+            , <&key_physical_attrs 125 100  925   300   0     0     0> 
+            , <&key_physical_attrs 125 100  1050  300   0     0     0> //Left
+            , <&key_physical_attrs 100 100  1175  300   0     0     0>
+            , <&key_physical_attrs 125 100  1275  300   0     0     0>
+            , <&key_physical_attrs 125 100  425   400   0     0     0>
+            , <&key_physical_attrs 150 100  550   400   0     0     0>   
+            , <&key_physical_attrs 125 100  700   400   0     0     0>
+            ;
+    };
+};
