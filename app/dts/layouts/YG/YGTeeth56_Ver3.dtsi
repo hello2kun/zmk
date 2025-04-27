@@ -11,31 +11,31 @@
         keys  //                     w   h  x     y     rot    rx    ry
             = <&key_physical_attrs 125 100  0     0     0     0     0>
             , <&key_physical_attrs 100 100  125   0     0     0     0> //Q
-            , <&key_physical_attrs 100 100  325   0     0     0     0> //E
+            , <&key_physical_attrs 100 100  600   200   0     0     0> //B
             , <&key_physical_attrs 100 100  525   0     0     0     0> //T
             , <&key_physical_attrs 100 100  625   0     0     0     0> //Y
             , <&key_physical_attrs 100 100  725   0     0     0     0> //U
             , <&key_physical_attrs 100 100  925   0     0     0     0> //O
-            , <&key_physical_attrs 100 100  1025  0     0     0     0> //LBKT
+            , <&key_physical_attrs 200 100  0     0     0     0     0> //SHIFT
             , <&key_physical_attrs 150 100  0     100   0     0     0> //CAPS
             , <&key_physical_attrs 100 100  150   100   0     0     0> //A
             , <&key_physical_attrs 100 100  350   100   0     0     0> //D
             , <&key_physical_attrs 100 100  550   100   0     0     0> //G
             , <&key_physical_attrs 100 100  650   100   0     0     0> //H
-            , <&key_physical_attrs 125 100  1450  0     0     0     0> //Back Space
+            , <&key_physical_attrs 100 100  825   0     0     0     0> //I
             , <&key_physical_attrs 150 100  0     100   0     0     0> //Caps
             , <&key_physical_attrs 100 100  825   0     0     0     0> //I
             , <&key_physical_attrs 100 100  1025  0     0     0     0> //P
             , <&key_physical_attrs 100 100  1225  0     0     0     0> //RBKT
             , <&key_physical_attrs 200 100  0     200   0     0     0> //LSHIFT
             , <&key_physical_attrs 100 100  225   0     0     0     0> //W
-            , <&key_physical_attrs 100 100  425   200   0     0     0> //R
+            , <&key_physical_attrs 100 100  425   0     0     0     0> //R
+
             , <&key_physical_attrs 100 100  700   300   0     0     0> //B
             , <&key_physical_attrs 100 100  800   300   0     0     0> //N
             , <&key_physical_attrs 100 100  950   200   0     0     0> //K
             , <&key_physical_attrs 100 100  1150  200   0     0     0> //Semicolon
-            , <&key_physical_attrs 125 100  1325   0     0     0     0> //backspace
-
+            , <&key_physical_attrs 100 100  250   100     0     0     0> //S
             , <&key_physical_attrs 125 100  0     300   0     0     0> //LCTRL
             , <&key_physical_attrs 100 100  250   100   0     0     0> //S
             , <&key_physical_attrs 100 100  450   100   0     0     0> //F
