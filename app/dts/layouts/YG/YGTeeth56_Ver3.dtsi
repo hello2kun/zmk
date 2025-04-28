@@ -48,8 +48,8 @@
             , <&key_physical_attrs 125 100  450   400   0     0     0> //ht SHIFT SPACE Left?
             , <&key_physical_attrs 150 100  575   400   0     0     0> //LT1 space
             , <&key_physical_attrs 100 100  800   200   0     0     0> //M
-            , <&key_physical_attrs 100 100  900   200   0     0     0> //,
-            , <&key_physical_attrs 100 100  1000  200   0     0     0> // .DOT ??????
+            , <&key_physical_attrs 100 100  1000  200   0     0     0> //,
+            , <&key_physical_attrs 100 100  900   200   0     0     0> // .DOT
             , <&key_physical_attrs 100 100  1200  200   0     0     0> //UP
 
             , <&key_physical_attrs 125 100  225   300   0     0     0> //ALT
@@ -57,7 +57,7 @@
             , <&key_physical_attrs 100 100  450   300   0     0     0> // "-" special
             , <&key_physical_attrs 100 100  650   300   0     0     0> // "*" special
             , <&key_physical_attrs 100 100  750   300   0     0     0> // "/" special
-            , <&key_physical_attrs 100 100  1100  200   0     0     0> //Dot ???????
+            , <&key_physical_attrs 100 100  1100  400   0     0     0> //Dot ???????
             , <&key_physical_attrs 125 100  1075  300   0     0     0> //Left
             , <&key_physical_attrs 150 100  1300  200   0     0     0> //R Shift
             , <&key_physical_attrs 100 100  200   200   0     0     0> //Z
