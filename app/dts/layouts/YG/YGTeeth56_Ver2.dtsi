@@ -64,11 +64,12 @@
             , <&key_physical_attrs 125 100  450   400   0     0     0> // LT Shift Space
             , <&key_physical_attrs 150 100  575   400   0     0     0> // LT1 Space
 
-            , <&key_physical_attrs 125 100  725   400   0     0     0> //???
-            , <&key_physical_attrs 150 100  1350  300   0     0     0> //Right
+            , <&key_physical_attrs 125 100  1500  400   0     0     0> //???
+            , <&key_physical_attrs 125 100  1300  300   0     0     0> //Right
             , <&key_physical_attrs 150 100  1300  200   0     0     0> //RShift
-            , <&key_physical_attrs 200 100  1225  100   0     0     0> //Return
+            , <&key_physical_attrs 200 100  1250  100   0     0     0> //Return
             , <&key_physical_attrs 125 100  1325  0     0     0     0> //BackSpace
+            , <&key_physical_attrs 100 100  1225  0     0     0     0> //RBKT
             ;
     };
 };
