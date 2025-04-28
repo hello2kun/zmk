@@ -26,7 +26,7 @@
 
             , <&key_physical_attrs 100 100  1025  0     0     0     0> //P
             , <&key_physical_attrs 100 100  1225  0     0     0     0> //}
-            , <&key_physical_attrs 200 100  0     0     0     0     0> //Left SHIFT
+            , <&key_physical_attrs 200 100  0     200   0     0     0> //Left SHIFT
             , <&key_physical_attrs 100 100  225   0     0     0     0> //W
             , <&key_physical_attrs 100 100  425   0     0     0     0> //R
             , <&key_physical_attrs 100 100  600   200   0     0     0> //B
