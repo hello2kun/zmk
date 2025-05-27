@@ -24,7 +24,7 @@
             compatible = "alps,ec11";
             a-gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
             b-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-            steps = <60>; // 회전을 완료하는데 펄스수
+            steps = <40>; // 회전을 완료하는데 펄스수
             status = "okay"; 
     };
 
