@@ -5,5 +5,4 @@ if SHIELD_YGTEETH56_V3
 
 config ZMK_KEYBOARD_NAME
     default "YGTeeth56_V3"
-
 endif
