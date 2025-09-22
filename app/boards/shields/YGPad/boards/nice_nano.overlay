@@ -1,0 +1,78 @@
+#include <dt-bindings/led/led.h>
+
+&pinctrl 
+{
+    spi3_default: spi3_default
+    {
+        group1
+        {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>;
+        };
+    };
+
+
+    spi3_sleep: spi3_sleep 
+    {
+        group1
+        {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>; 
+            low-power-enable;
+        };
+    };
+};
+
+&spi3 
+{
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+
+    pinctrl-0 = <&spi3_default>; #기본 핀 맵핑
+    pinctrl-1 = <&spi3_sleep>;   #저전력 상태에서 핀맵핑
+    pinctrl-names = "default", "sleep";
+
+    led_strip: ws2812@0
+    {
+        compatible = "worldsemi,ws2812-spi";
+
+        /* SPI */
+        reg = <0>; /* ignored, but necessary for SPI bindings */
+        spi-max-frequency = <4000000>;
+
+        /* WS2812 */
+        chain-length = <1>; /* arbitrary; change at will */
+        spi-one-frame = <0x70>;
+        spi-zero-frame = <0x40>;
+
+        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
+    };
+};
+
+/*
+encoder: encoder
+{
+    compatible = "alps,ec11";
+    a-gpios = <&gpio17 (GPIO_ACTIVATE_HIGH | GPIO_PULL_UP)>; //017번 핀
+    b-gpios = <&gpio20 (GPIO_ACTIVATE_HIGH | GPIO_PULL_UP)>; //020번 핀
+    steps = <80>; //인코더 단계 수
+    status = "disabled";
+};
+
+sensors: sensors
+{
+    compatible = "zmk, keymap-sensors";
+    sensors = <&encoder>;
+    triggers-per-rotation = <20>;
+}
+
+&encoder
+{
+    status = "okay";
+}
+*/
+
+/ {
+        chosen 
+        {
+        zmk,underglow = &led_strip; 
+        };
+    };

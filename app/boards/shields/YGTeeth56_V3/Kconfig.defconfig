@@ -1,0 +1,8 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_YGTEETH56_V3
+
+config ZMK_KEYBOARD_NAME
+    default "YGTeeth56_V3"
+endif

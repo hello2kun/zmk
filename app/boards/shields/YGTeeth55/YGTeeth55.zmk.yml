@@ -1,0 +1,9 @@
+file_format: "1"
+id: YGTeeth55
+name: YGTeeth55
+type: shield
+url: https://github.com/hello2kun/YGTeeth55
+requires: [pro_micro]
+features:
+  - keys
+  - studio

@@ -1,0 +1,10 @@
+file_format: "1"
+id: YGTeeth56_ChocV2
+name: YGTeeth56_ChocV2
+type: shield
+url: https://github.com/hello2kun/YGTeeth56_ChocV2
+requires: [pro_micro]
+features:
+  - keys
+  - undergrow
+  - studio

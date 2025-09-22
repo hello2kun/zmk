@@ -1,0 +1,10 @@
+file_format: "1"
+id: YGPad
+name: YGPad
+type: shield
+url: https://github.com/hello2kun/YGPad
+requires: [pro_micro]
+features:
+  - keys
+  - undergrow
+  - studio
