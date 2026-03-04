@@ -13,6 +13,7 @@ module.exports = {
         "faq",
         "user-setup",
         "customization",
+        "zmk-cli",
         {
           type: "category",
           label: "Troubleshooting",
@@ -121,6 +122,7 @@ module.exports = {
         "config/battery",
         "config/behaviors",
         "config/bluetooth",
+        "config/bootloader",
         "config/combos",
         "config/displays",
         "config/encoders",
@@ -156,7 +158,24 @@ module.exports = {
             "development/hardware-integration/encoders",
             "development/hardware-integration/soft-off-setup",
             "development/hardware-integration/pointing",
+            "development/hardware-integration/new-board",
             "development/hardware-integration/battery",
+            {
+              type: "category",
+              label: "Bootloader",
+              link: {
+                type: "doc",
+                id: "development/hardware-integration/bootloader/index",
+              },
+              collapsed: true,
+              items: [
+                "development/hardware-integration/bootloader/adafruit-nrf52",
+                "development/hardware-integration/bootloader/tinyuf2",
+                "development/hardware-integration/bootloader/samd21-uf2",
+                "development/hardware-integration/bootloader/rp2",
+                "development/hardware-integration/bootloader/stm32",
+              ],
+            },
             {
               type: "category",
               label: "Lighting",
